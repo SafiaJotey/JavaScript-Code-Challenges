@@ -20,14 +20,12 @@ function duplicateCount(text) {
   for (let char of textArray) {
     for (let element of textArray) {
       if (char === element) {
-        // count += 1;
         arr.push(char);
       }
     }
     if (arr.length > 1) {
       duplicate += 1;
       textArray = textArray.filter((c) => c !== char);
-      console.log(textArray);
     }
     arr = [];
   }
