@@ -14,5 +14,6 @@
 // Inputs are guaranteed to be a single string
 
 function isValidIP(str) {
+  const regex = /[0-8]{1,4}/;
   return false;
 }
