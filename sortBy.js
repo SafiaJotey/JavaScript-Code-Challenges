@@ -20,5 +20,7 @@
 // Output: [[10, 1], [5, 2], [3, 4]]
 // Explanation: arr is sorted in ascending order by number at index=1. 
 var sortBy = function(arr, fn) {
-    
+    const newArray=arr.sort(fn)
+    console.log(newArray)
 };
+sortBy([{"x": 1}, {"x": 0}, {"x": -1}],(d) => d.x)
