@@ -2,8 +2,6 @@
 
 // Increment the large integer by one and return the resulting array of digits.
 
- 
-
 // Example 1:
 
 // Input: digits = [1,2,3]
@@ -25,10 +23,11 @@
 // Explanation: The array represents the integer 9.
 // Incrementing by one gives 9 + 1 = 10.
 // Thus, the result should be [1,0].
-var plusOne = function(digits) {
-  console.log()
-  const nums=String(BigInt(digits.join(''))+1n).split('').map(item=>parseInt(item))
-  
-  return nums
+var plusOne = function (digits) {
+  const nums = String(BigInt(digits.join("")) + 1n)
+    .split("")
+    .map((item) => parseInt(item));
+
+  return nums;
 };
-console.log(plusOne([6,1,4,5,3,9,0,1,9,5,1,8,6,7,0,5,5,4,3]))
+console.log(plusOne([6, 1, 4, 5, 3, 9, 0, 1, 9, 5, 1, 8, 6, 7, 0, 5, 5, 4, 3]));
