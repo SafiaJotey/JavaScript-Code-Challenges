@@ -41,8 +41,8 @@ var removeDuplicates = function(nums) {
         k++
       continue
       }
-      console.log(k,i,nums[k])
-      if(nums[k]!==nums[i]){
+      console.log(k,i,nums[k-1],nums[i])
+      if(nums[k-1]!==nums[i]){
         console.log("in loop",k,i)
         nums[k]=nums[i]
         k++
@@ -51,4 +51,4 @@ var removeDuplicates = function(nums) {
     nums.length=k
     return nums
 };
-console.log(removeDuplicates([0,0,1,1,1,2,2,3,3,4]))
+console.log(removeDuplicates([1,1,2]))
