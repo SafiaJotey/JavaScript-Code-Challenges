@@ -52,3 +52,23 @@ var removeDuplicates = function(nums) {
     return nums
 };
 console.log(removeDuplicates([1,1,2]))
+
+var removeDuplicate = function(nums) {
+  if (nums.length === 0) return 0; // Edge case: if the array is empty, return 0.
+
+  let i = 0; // Initialize the first pointer for unique elements.
+  
+  // Loop through the array starting from index 1 (second element)
+  for (let j = 1; j < nums.length; j++) {
+      // If a new unique element is found, update nums[i + 1]
+      if (nums[j] !== nums[i]) {
+          i++; // Move the unique element pointer forward
+          
+          nums[i] = nums[j]; // Assign the new unique element to nums[i]
+      }
+  } 
+  
+  // Return the number of unique elements
+  return nums;
+    
+};
