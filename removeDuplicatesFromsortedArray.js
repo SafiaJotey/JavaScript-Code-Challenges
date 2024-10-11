@@ -19,8 +19,6 @@
 // }
 // If all assertions pass, then your solution will be accepted.
 
- 
-
 // Example 1:
 
 // Input: nums = [1,1,2]
@@ -33,42 +31,43 @@
 // Output: 5, nums = [0,1,2,3,4,_,_,_,_,_]
 // Explanation: Your function should return k = 5, with the first five elements of nums being 0, 1, 2, 3, and 4 respectively.
 // It does not matter what you leave beyond the returned k (hence they are underscores).
-var removeDuplicates = function(nums) {
-    let k=0
-    for(let i=0; i<nums.length; i++){
-      if(k===0){   console.log("in zero loop",k,i)
-        nums[k]=nums[i]
-        k++
-      continue
-      }
-      console.log(k,i,nums[k-1],nums[i])
-      if(nums[k-1]!==nums[i]){
-        console.log("in loop",k,i)
-        nums[k]=nums[i]
-        k++
-      }
+var removeDuplicates = function (nums) {
+  let k = 0;
+  for (let i = 0; i < nums.length; i++) {
+    if (k === 0) {
+      console.log("in zero loop", k, i);
+      nums[k] = nums[i];
+      k++;
+      continue;
     }
-    nums.length=k
-    return nums
-};
-console.log(removeDuplicates([1,1,2]))
-
-var removeDuplicate = function(nums) {
-  if (nums.length === 0) return 0; // Edge case: if the array is empty, return 0.
-
-  let i = 0; // Initialize the first pointer for unique elements.
-  
-  // Loop through the array starting from index 1 (second element)
-  for (let j = 1; j < nums.length; j++) {
-      // If a new unique element is found, update nums[i + 1]
-      if (nums[j] !== nums[i]) {
-          i++; // Move the unique element pointer forward
-          
-          nums[i] = nums[j]; // Assign the new unique element to nums[i]
-      }
-  } 
-  
-  // Return the number of unique elements
+    console.log(k, i, nums[k - 1], nums[i]);
+    if (nums[k - 1] !== nums[i]) {
+      console.log("in loop", k, i);
+      nums[k] = nums[i];
+      k++;
+    }
+  }
+  nums.length = k;
   return nums;
-    
+};
+console.log(removeDuplicates([1, 1, 2]));
+
+var removeDuplicate = function (nums) {
+  if (nums.length === 0) return 0;
+
+  let i = 0;
+
+  for (let j = 1; j < nums.length; j++) {
+    if (nums[j] !== nums[i]) {
+      i++;
+
+      nums[i] = nums[j];
+    }
+  }
+
+  return nums;
+};
+const h2 = {
+  key: "3",
+  key2: 3,
 };
