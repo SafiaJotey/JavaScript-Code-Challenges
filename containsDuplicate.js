@@ -29,12 +29,10 @@ var containsDuplicate = function (nums) {
   const uniqueNum = new Set();
 
   for (let num of nums) {
-    if ( uniqueNum.has(num)) {
+    if (uniqueNum.has(num)) {
       return true;
     } else {
-      console.log(num)
       uniqueNum.add(num);
-     
     }
   }
 
