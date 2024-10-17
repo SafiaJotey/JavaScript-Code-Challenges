@@ -41,6 +41,7 @@ var containsNearbyDuplicate = function (nums, k) {
       value.set(nums[i], i);
    
   }
+  console.log(value)
   return false;
 };
-console.log(containsNearbyDuplicate([1,0,1,1], 1));
+console.log(containsNearbyDuplicate([1,0,1,1], 0));
