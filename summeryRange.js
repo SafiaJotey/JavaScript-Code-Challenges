@@ -27,14 +27,7 @@
 // [6,6] --> "6"
 // [8,9] --> "8->9"
 // var summaryRanges = function (nums) {
-  
+
 // };
 // console.log(summaryRanges([0, 2, 3, 4, 6, 8, 9]));
 // summaryRanges([0, 2, 3, 4, 6, 8, 9]);
-
-
-
-
-const arr=[1,2,3,4]
-let newArr=arr.forEach(item=>item*2)
-console.log(arr,newArr)
